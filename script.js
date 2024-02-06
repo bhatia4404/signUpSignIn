@@ -41,7 +41,8 @@ btnSubmitSignIn.addEventListener("click", async function (e) {
       "Content-type": "application/json",
     },
   });
-  console.log(res);
+  // const ans = await res.json();
+  console.log(res.body);
 });
 btnSubmitSignUp.addEventListener("click", async function (e) {
   e.preventDefault();
@@ -61,5 +62,6 @@ btnSubmitSignUp.addEventListener("click", async function (e) {
       "Content-type": "application/json",
     },
   });
+  // const ans = await res.json();
   console.log(res);
 });

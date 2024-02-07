@@ -60,5 +60,9 @@ router.post("/signin", signInMiddleware, async function (req, res) {
     });
   }
 });
-
+router.get("/", function (req, res) {
+  res.json({
+    message: "Server is working",
+  });
+});
 module.exports = router;

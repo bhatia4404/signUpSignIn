@@ -31,16 +31,19 @@ btnSubmitSignIn.addEventListener("click", async function (e) {
   e.preventDefault();
   const emailValue = inputEmailSignIn.value;
   const passwordValue = inputPasswordSignIn.value;
-  const res = await fetch("http://localhost:3000/user/signin", {
-    method: "POST",
-    body: {
-      email: emailValue,
-      password: passwordValue,
-    },
-    headers: {
-      "Content-type": "application/json",
-    },
-  });
+  const res = await fetch(
+    "https://sign-up-sign-in-backend.vercel.app/user/signin",
+    {
+      method: "POST",
+      body: {
+        email: emailValue,
+        password: passwordValue,
+      },
+      headers: {
+        "Content-type": "application/json",
+      },
+    }
+  );
 
   const ans = await res.json();
 });
@@ -50,18 +53,21 @@ btnSubmitSignUp.addEventListener("click", async function (e) {
   const lastNameValue = inputLastNameSignUp.value;
   const emailValue = inputEmailSignUp.value;
   const passwordValue = inputPasswordSignUp.value;
-  const res = await fetch("http://localhost:3000/user/signup", {
-    method: "POST",
-    body: {
-      firstName: firstNameValue,
-      lastName: lastNameValue,
-      email: emailValue,
-      password: passwordValue,
-    },
-    headers: {
-      "Content-type": "application/json",
-    },
-  });
+  const res = await fetch(
+    "https://sign-up-sign-in-backend.vercel.app/user/signup",
+    {
+      method: "POST",
+      body: {
+        firstName: firstNameValue,
+        lastName: lastNameValue,
+        email: emailValue,
+        password: passwordValue,
+      },
+      headers: {
+        "Content-type": "application/json",
+      },
+    }
+  );
   // const ans = await res.json();
   console.log(res);
 });

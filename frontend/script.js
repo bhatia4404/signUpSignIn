@@ -46,7 +46,7 @@ btnSubmitSignIn.addEventListener("click", async function (e) {
     }
   );
 
-  const ans = await res.json();
+  console.log(res);
 });
 btnSubmitSignUp.addEventListener("click", async function (e) {
   e.preventDefault();

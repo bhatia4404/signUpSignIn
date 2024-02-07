@@ -42,6 +42,7 @@ btnSubmitSignIn.addEventListener("click", async function (e) {
       headers: {
         "Content-type": "application/json",
       },
+      mode: "no-cors",
     }
   );
 
